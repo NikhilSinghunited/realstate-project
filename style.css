@@ -1,0 +1,158 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.left-side-bar.container .row {
+  align-items: center;
+}
+
+.row {
+  display: -ms-flexbox;
+
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  /* background: #ed1b24; */
+  /* padding: 20px 0px; */
+  /* background-color: ; */
+}
+body {
+  font-family: 'Rubik', sans-serif;
+  font-size: 16px;
+  color: #1a1a1a;
+  font-weight: 300;
+}
+
+.contact-details a {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+a,
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+a {
+  background-color: transparent;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+}
+
+.int {
+  padding-left: 10px;
+}
+
+.top-bar {
+  background-color: #ed1b24;
+}
+
+.navbar {
+  background-attachment: fixed;
+  /* background-color: #fff; */
+}
+
+.navbar-light {
+  box-shadow: rgba(242, 56, 56, 0.1) 0px 4px 12px;
+}
+
+.banner {
+  background-image: url(banner.jpeg);
+  background-size: cover;
+  padding: 200px 0;
+  text-align: center;
+}
+
+section.banner {
+  margin-top: 175px;
+}
+
+h1 {
+  font-family: Rubik, sans-serif;
+  font-size: 80px;
+  /* line-height: 1.5rem; */
+  font-style: normal;
+  font-variant-caps: normal;
+  font-variant-east-asian: normal;
+  font-variant-ligatures: normal;
+  font-variant-numeric: normal;
+  font-weight: 700;
+}
+
+p {
+  letter-spacing: 2px;
+
+  font-family: Rubik, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.cst-three-div-1 {
+  border: 1px solid red;
+  border-radius: 2px;
+}
+
+.karow-1 {
+  padding: 60px 20px 20px 20px;
+}
+
+.post-header-1 {
+  font-family: Rubik, sans-serif;
+  background-color: #ed1b24;
+  text-align: center;
+  color: #fff !important;
+  margin-bottom: 8px;
+  font-weight: 500;
+  padding: 2.5px;
+}
+
+.post-header a {
+  font-weight: 500;
+}
+.card-body {
+  box-shadow: rgb(0 0 0 / 10%) 8px 4px 12px;
+}
+
+.post-slide .cst-more {
+  padding-left: 98px !important;
+}
+
+.post-slide .read-more {
+  color: #ed1b24;
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+.subtitle {
+  color: #1a1a1a;
+  font-size: 13px;
+  display: inline-block;
+  margin-bottom: 5px;
+  transition: all 0.4s ease 0s;
+  font-weight: 900 !important;
+}
+.search {
+  font-family: Arial, sans-serif;
+  margin-top: 20%;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+.item {
+  border: 1px solid black;
+  padding: 10px;
+  margin-bottom: 10px;
+  /* display: none; */
+}
+.full-width-content {
+  width: 100%;
+}

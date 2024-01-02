@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="headerSection fixed-top">
+
+        <div class="top-bar">
+            <div class="left-side-bar container ">
+                <div class="row  d-flex ">
+                    <div class="col-md-6 px-5">
+                        <div class="contact-details d-flex px-5">
+                            <div class="contact-emal">
+                                <a href="mailto:Info@cpgroup.in"><i class="fa fa-envelope"></i>Email:-
+                                    Info@cpgroup.in</a>
+                            </div>
+                            <div class="contact-num">
+                                <a href="tel:+916262626462"><i class="fa fa-phone"></i>Call us:-
+                                    +91626 262 6462</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 number-form ">
+                        <div class="right-side-bar header-form">
+
+                            <form class="d-flex" role="search">
+                                <input class="form-control me-2" type="search"
+                                    placeholder="Enter Your Number(Request a call Back)" aria-label="Search">
+                                <button class="btn btn-warning" type="submit">Ok</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-danger  ">
+
+            <div class="container">
+
+                <a href="" class="navbar-brand d-block d-md-block d-sm-block d-lg-none d-xl-none"><img src="logo.jpg"
+                        class="img-fluid d-block" alt=""></a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+                    aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+
+                </button>
+
+                <div class="collapse navbar-collapse  " id="navbarTogglerDemo02">
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+
+                        <li class="nav-item active"> <a class="nav-link" href="">Home</a></li>
+
+                        <li class="nav-item dropdown">
+
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-expanded="false">
+
+                                Layout Maps
+
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="/properties-category/greater-noida/">Greater Noida</a>
+                                <a class="dropdown-item" href="/yamuna-expressway-site-maps/">Yamuna Exp. Side Maps</a>
+                                <a class="dropdown-item" href="/properties-category/noida/">Noida</a>
+                            </div>
+
+                        </li>
+
+                    </ul>
+
+                    <div class="mx-auto d-none d-md-none d-sm-none d-lg-block d-xl-block logo">
+                        <a href class="navbar-brand"><img src="logo.jpg" class="img-fluid d-block"
+                                alt="Chhabra Properties"></a>
+
+                    </div>
+                    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+
+                        <li class="nav-item"> <a class="nav-link" href>About</a></li>
+
+                        <li class="nav-item"> <a class="nav-link" href>Contact Us</a></li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <div class="search">
+        <label for="filter">Select Filter:</label>
+        <select id="filter" onchange="applyFilter()">
+            <option value="all">Show All</option>
+            <option value="Commercial">Commercial</option>
+            <option value="Sale">Sale</option>
+            <option value="Purchase">Purchase</option>
+            <option value="Location">Location</option>
+        </select>
+    </div>
+
+    <!-- <div class="item Commercial">Commercial Item</div>
+    <div class="item Sale">Sale Item</div>
+    <div class="item Purchase">Purchase Item</div> -->
+
+    <!-- <div class="item Location" id="locationItem">
+        Location Item
+        <label for="locationFilter">Select Location Filter:</label>
+        <select id="locationFilter" onchange="applyLocationFilter()">
+            <option value="all">Show All</option>
+        </select>
+        <div id="locationContent">
+            Display location content here
+    <img id="locationImage" src="" alt="Location Image">
+    </div> -->
+    </div>
+
+    <section class="banner align-self-center">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-md-12 align-self-center">
+
+                    <div class="main-title">
+
+                        <h1 class="text-white text-uppercase">Chhabra Properties</h1>
+
+                        <p class="text-white text-uppercase"> Industrial plots , Factory, Warehouse- Greater Noida |
+                            Yamuna Expressway | Sikandrabad </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <section class="casing-area py-5 gray-bg">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-md-9 py-5  main">
+                    <div class="cst-three-div-1">
+                        <div class="row  karow-1">
+                            <div class="col-md-4">
+                                <div class="div-img">
+                                    <div class="card cst-cart">
+
+                                        <div class="card-body">
+
+                                            <div class="post-slide">
+
+                                                <div class="post-header-1">
+
+                                                    <a href="" class="subtitle text-white">GREATER NOIDA</a>
+
+                                                </div>
+
+                                                <a href="">
+                                                    <div class="pic">
+
+                                                        <img src="SECTOR-31-SWARAN-NAGRI-1.jpg"
+                                                            alt="SECTOR-31-SWARAN-NAGRI-1" class="img-fluid">
+
+                                                    </div>
+                                                </a>
+
+
+                                                <h5 class="post-description"></h5>
+
+                                                <a href="" class="read-more  text-uppercase text-danger">read
+                                                    more</a>
+                                                <a href="SECTOR-31-SWARAN-NAGRI-1.jpg" download=""
+                                                    class="download read-more cst-more text-uppercase text-danger">Download</a>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="div-img">
+                                    <div class="card cst-cart">
+
+                                        <div class="card-body">
+
+                                            <div class="post-slide">
+
+                                                <div class="post-header-1">
+
+                                                    <a href="" class="subtitle text-white">YAMUNA EXPRESSWAY</a>
+
+                                                </div>
+
+                                                <a href="">
+                                                    <div class="pic">
+
+                                                        <img src="YAMUNA-EXPRESSWAY-PHASE-I-MP-2.jpg"
+                                                            alt="YAMUNA-EXPRESSWAY-PHASE-I-MP-2" class="img-fluid">
+
+                                                    </div>
+                                                </a>
+                                                <h5 class="post-description"></h5>
+
+                                                <a href="" class="read-more text-uppercase text-danger">read
+                                                    more</a>
+                                                <a href="YAMUNA-EXPRESSWAY-PHASE-I-MP-2.jpg" download=""
+                                                    class="download read-more cst-more text-uppercase text-danger">Download</a>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="div-img">
+                                    <div class="card cst-cart">
+
+                                        <div class="card-body">
+
+                                            <div class="post-slide">
+
+                                                <div class="post-header-1">
+
+
+                                                    <a href="" class="subtitle text-white">SIKANDRABAD</a>
+
+                                                </div>
+
+                                                <a href="">
+                                                    <div class="pic">
+
+                                                        <img src="SECTOR-31-SWARAN-NAGRI-3.jpg"
+                                                            alt="SECTOR-31-SWARAN-NAGRI-3" class="img-fluid">
+
+                                                    </div>
+                                                </a>
+                                                <h5 class="post-description"></h5>
+
+                                                <a href="#" class="read-more text-uppercase text-danger">read
+                                                    more</a>
+                                                <a href="SECTOR-31-SWARAN-NAGRI-3.jpg" download=""
+                                                    class=" read-more cst-more text-uppercase text-danger ">Download</a>
+
+                                            </div>
+
+                                        </div>
+                                        <script
+                                            src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+                                        <script>
+                                            $(document).ready(function () {
+                                                setInterval(function () {
+                                                    $('.subtitle').animate({ backgroundColor: 'red' }, 300)
+                                                        .animate({ backgroundColor: 'green' }, 300);
+                                                }, 1000);
+                                            });
+                                        </script>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+
+
+
+                <div class="container">
+
+                    <div class="row">
+
+                        <div class="col-md-9 main">
+                            <div class="cst-three-div">
+                                <div class="row  karow">
+                                    <div class="col-md-4">
+                                        <div class="div-img">
+                                            <div class="card cst-cart">
+
+                                                <div class="card-body">
+
+                                                    <div class="post-slide">
+
+                                                        <div class="post-header">
+
+                                                            <a href="" class="subtitle text-black ">sector-20
+                                                                block-h |
+                                                                sector-20<br>pocket-h
+                                                            </a>
+
+                                                        </div>
+
+                                                        <a href="">
+                                                            <div class="pic">
+
+                                                                <img src="SECTOR-31-SWARAN-NAGRI-1.jpg"
+                                                                    alt="SECTOR-31-SWARAN-NAGRI-1" class="img-fluid">
+
+                                                            </div>
+                                                        </a>
+
+
+                                                        <h5 class="post-description"></h5>
+
+                                                        <a href="" class="read-more  text-uppercase text-danger">read
+                                                            more</a>
+                                                        <a href="SECTOR-31-SWARAN-NAGRI-1.jpg" download=""
+                                                            class="download read-more cst-more text-uppercase text-danger">Download</a>
+
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="div-img">
+                                            <div class="card cst-cart">
+
+                                                <div class="card-body">
+
+                                                    <div class="post-slide">
+
+                                                        <div class="post-header">
+
+                                                            <a href="" class="subtitle text-black ">sector-20
+                                                                block-h |
+                                                                sector-20<br>pocket-h
+                                                            </a>
+                                                        </div>
+
+                                                        <a href="">
+                                                            <div class="pic">
+
+                                                                <img src="YAMUNA-EXPRESSWAY-PHASE-I-MP-2.jpg"
+                                                                    alt="YAMUNA-EXPRESSWAY-PHASE-I-MP-2"
+                                                                    class="img-fluid">
+
+                                                            </div>
+                                                        </a>
+                                                        <h5 class="post-description"></h5>
+
+                                                        <a href="" class="read-more text-uppercase text-danger">read
+                                                            more</a>
+                                                        <a href="YAMUNA-EXPRESSWAY-PHASE-I-MP-2.jpg" download=""
+                                                            class="download read-more cst-more text-uppercase text-danger">Download</a>
+
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="div-img">
+                                            <div class="card cst-cart">
+
+                                                <div class="card-body">
+
+                                                    <div class="post-slide">
+
+                                                        <div class="post-header">
+
+
+                                                            <a href="" class="subtitle text-black ">sector-20
+                                                                block-h |
+                                                                sector-20<br>pocket-h
+                                                            </a>
+                                                        </div>
+
+                                                        <a href="">
+                                                            <div class="pic">
+
+                                                                <img src="SECTOR-31-SWARAN-NAGRI-3.jpg"
+                                                                    alt="SECTOR-31-SWARAN-NAGRI-3" class="img-fluid">
+
+                                                            </div>
+                                                        </a>
+                                                        <h5 class="post-description"></h5>
+
+                                                        <a href="#" class="read-more text-uppercase text-danger">read
+                                                            more</a>
+                                                        <a href="SECTOR-31-SWARAN-NAGRI-3.jpg" download=""
+                                                            class=" read-more cst-more text-uppercase text-danger ">Download</a>
+
+                                                    </div>
+
+                                                </div>
+                                                <script
+                                                    src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+                                                <script>
+                                                    $(document).ready(function () {
+                                                        setInterval(function () {
+                                                            $('.subtitle').animate({ backgroundColor: 'red' }, 300)
+                                                                .animate({ backgroundColor: 'green' }, 300);
+                                                        }, 1000);
+                                                    });
+                                                </script>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+
+
+
+
+
+                        <div class="container">
+
+                            <div class="row">
+
+                                <div class="col-md-9 py-5 main">
+                                    <div class="cst-three-div">
+                                        <div class="row  karow">
+                                            <div class="col-md-4">
+                                                <div class="div-img">
+                                                    <div class="card cst-cart">
+
+                                                        <div class="card-body">
+
+                                                            <div class="post-slide">
+
+                                                                <div class="post-header">
+
+                                                                    <a href="" class="subtitle text-black ">sector-20
+                                                                        Block-f
+                                                                    </a>
+
+                                                                </div>
+
+                                                                <a href="">
+                                                                    <div class="pic">
+
+                                                                        <img src="SECTOR-31-SWARAN-NAGRI-1.jpg"
+                                                                            alt="SECTOR-31-SWARAN-NAGRI-1"
+                                                                            class="img-fluid">
+
+                                                                    </div>
+                                                                </a>
+
+
+                                                                <h5 class="post-description"></h5>
+
+                                                                <a href=""
+                                                                    class="read-more  text-uppercase text-danger">read
+                                                                    more</a>
+                                                                <a href="SECTOR-31-SWARAN-NAGRI-1.jpg" download=""
+                                                                    class="download read-more cst-more text-uppercase text-danger">Download</a>
+
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="div-img">
+                                                    <div class="card cst-cart">
+
+                                                        <div class="card-body">
+
+                                                            <div class="post-slide">
+
+                                                                <div class="post-header">
+
+                                                                    <a href="" class="subtitle text-black ">sector-18-20
+                                                                        Combined Plan
+                                                                    </a>
+                                                                </div>
+
+                                                                <a href="">
+                                                                    <div class="pic">
+
+                                                                        <img src="YAMUNA-EXPRESSWAY-PHASE-I-MP-2.jpg"
+                                                                            alt="YAMUNA-EXPRESSWAY-PHASE-I-MP-2"
+                                                                            class="img-fluid">
+
+                                                                    </div>
+                                                                </a>
+                                                                <h5 class="post-description"></h5>
+
+                                                                <a href=""
+                                                                    class="read-more text-uppercase text-danger">read
+                                                                    more</a>
+                                                                <a href="YAMUNA-EXPRESSWAY-PHASE-I-MP-2.jpg" download=""
+                                                                    class="download read-more cst-more text-uppercase text-danger">Download</a>
+
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="div-img">
+                                                    <div class="card cst-cart">
+
+                                                        <div class="card-body">
+
+                                                            <div class="post-slide">
+
+                                                                <div class="post-header">
+
+
+                                                                    <a href="" class="subtitle text-black ">Sector-20
+                                                                        Block-A
+                                                                    </a>
+                                                                </div>
+
+                                                                <a href="">
+                                                                    <div class="pic">
+
+                                                                        <img src="SECTOR-31-SWARAN-NAGRI-3.jpg"
+                                                                            alt="SECTOR-31-SWARAN-NAGRI-3"
+                                                                            class="img-fluid">
+
+                                                                    </div>
+                                                                </a>
+                                                                <h5 class="post-description"></h5>
+
+                                                                <a href="#"
+                                                                    class="read-more text-uppercase text-danger">read
+                                                                    more</a>
+                                                                <a href="SECTOR-31-SWARAN-NAGRI-3.jpg" download=""
+                                                                    class=" read-more cst-more text-uppercase text-danger ">Download</a>
+
+                                                            </div>
+
+                                                        </div>
+                                                        <script
+                                                            src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+                                                        <script>
+                                                            $(document).ready(function () {
+                                                                setInterval(function () {
+                                                                    $('.subtitle').animate({ backgroundColor: 'red' }, 300)
+                                                                        .animate({ backgroundColor: 'green' }, 300);
+                                                                }, 1000);
+                                                            });
+                                                        </script>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+
+
+
+
+
+                                <div class="container">
+
+                                    <div class="row">
+
+                                        <div class="col-md-9  main">
+                                            <div class="cst-three-div">
+                                                <div class="row  karow">
+                                                    <div class="col-md-4">
+                                                        <div class="div-img">
+                                                            <div class="card cst-cart">
+
+                                                                <div class="card-body">
+
+                                                                    <div class="post-slide">
+
+                                                                        <div class="post-header">
+
+                                                                            <a href=""
+                                                                                class="subtitle text-black ">sector-20
+                                                                                block-h | sector-20<br>pocket-h
+                                                                            </a>
+
+                                                                        </div>
+
+                                                                        <a href="">
+                                                                            <div class="pic">
+
+                                                                                <img src="SECTOR-31-SWARAN-NAGRI-1.jpg"
+                                                                                    alt="SECTOR-31-SWARAN-NAGRI-1"
+                                                                                    class="img-fluid">
+
+                                                                            </div>
+                                                                        </a>
+
+
+                                                                        <h5 class="post-description"></h5>
+
+                                                                        <a href=""
+                                                                            class="read-more  text-uppercase text-danger">read
+                                                                            more</a>
+                                                                        <a href="SECTOR-31-SWARAN-NAGRI-1.jpg"
+                                                                            download=""
+                                                                            class="download read-more cst-more text-uppercase text-danger">Download</a>
+
+                                                                    </div>
+
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="div-img">
+                                                            <div class="card cst-cart">
+
+                                                                <div class="card-body">
+
+                                                                    <div class="post-slide">
+
+                                                                        <div class="post-header">
+
+                                                                            <a href=""
+                                                                                class="subtitle text-black ">sector-20
+                                                                                block-h | sector-20<br>pocket-h
+                                                                            </a>
+                                                                        </div>
+
+                                                                        <a href="">
+                                                                            <div class="pic">
+
+                                                                                <img src="YAMUNA-EXPRESSWAY-PHASE-I-MP-2.jpg"
+                                                                                    alt="YAMUNA-EXPRESSWAY-PHASE-I-MP-2"
+                                                                                    class="img-fluid">
+
+                                                                            </div>
+                                                                        </a>
+                                                                        <h5 class="post-description"></h5>
+
+                                                                        <a href=""
+                                                                            class="read-more text-uppercase text-danger">read
+                                                                            more</a>
+                                                                        <a href="YAMUNA-EXPRESSWAY-PHASE-I-MP-2.jpg"
+                                                                            download=""
+                                                                            class="download read-more cst-more text-uppercase text-danger">Download</a>
+
+                                                                    </div>
+
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="div-img">
+                                                            <div class="card cst-cart">
+
+                                                                <div class="card-body">
+
+                                                                    <div class="post-slide">
+
+                                                                        <div class="post-header">
+
+
+                                                                            <a href=""
+                                                                                class="subtitle text-black ">sector-20
+                                                                                block-h | sector-20<br>pocket-h
+                                                                            </a>
+                                                                        </div>
+
+                                                                        <a href="">
+                                                                            <div class="pic">
+
+                                                                                <img src="SECTOR-31-SWARAN-NAGRI-3.jpg"
+                                                                                    alt="SECTOR-31-SWARAN-NAGRI-3"
+                                                                                    class="img-fluid">
+
+                                                                            </div>
+                                                                        </a>
+                                                                        <h5 class="post-description"></h5>
+
+                                                                        <a href="#"
+                                                                            class="read-more text-uppercase text-danger">read
+                                                                            more</a>
+                                                                        <a href="SECTOR-31-SWARAN-NAGRI-3.jpg"
+                                                                            download=""
+                                                                            class=" read-more cst-more text-uppercase text-danger ">Download</a>
+
+                                                                    </div>
+
+                                                                </div>
+                                                                <script
+                                                                    src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+                                                                <script>
+                                                                    $(document).ready(function () {
+                                                                        setInterval(function () {
+                                                                            $('.subtitle').animate({ backgroundColor: 'red' }, 300)
+                                                                                .animate({ backgroundColor: 'green' }, 300);
+                                                                        }, 1000);
+                                                                    });
+                                                                </script>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+                                        </div>
+                                    </div>
+    </section>
+
+
+
+    <div class=" contact">
+
+    </div>
+    <script>
+        function applyFilter() {
+            var filterValue = document.getElementById("filter").value;
+            var items = document.querySelectorAll(".item");
+
+            items.forEach(function (item) {
+                var itemKey = item.classList[1]; // Assuming the second class is the key
+                if (filterValue === "all" || itemKey === filterValue) {
+                    item.style.display = "block";
+                } else {
+                    item.style.display = "none";
+                }
+            });
+
+            if (filterValue === "Location") {
+                populateLocationOptions();
+            }
+        }
+
+        function applyLocationFilter() {
+            var locationFilterValue = document.getElementById("locationFilter").value;
+
+            // Open a new page with the location name
+            window.open("location_page.html?location=" + encodeURIComponent(locationFilterValue), "_blank");
+
+            // Alternatively, you can display an image or perform other actions based on the selected location
+        }
+
+        function populateLocationOptions() {
+            var locationFilterSelect = document.getElementById("locationFilter");
+
+            // Clear existing options
+            locationFilterSelect.innerHTML = '<option value="all">Show All</option>';
+
+            // Sample location options
+            var locations = [
+                "Alpha 1", "Alpha 2", "Beta 1", "Beta 2", "Delta 1", "Delta 2", "Delta 3",
+                "Ecotech 3", "Eta 1", "Eta 2", "Gamma 1", "Gamma 2", "Ghodi", "Junpat",
+                "Near jewar airport", "Omicron 1", "Omicron 1A", "Omicron 2", "Omicron 3",
+                "Raipur", "Sector 36,RHO 1", "Sector 37, RHO 2", "Sigma 1", "Sigma 2",
+                "Sigma 3", "Site 5", "Site C", "Swarn Nagri", "Xu 1", "Xu 2", "Xu 3",
+                "Yamuna expressway", "Zeta 1"
+            ];
+
+            // Add location options to the select element
+            locations.forEach(function (location) {
+                var option = document.createElement("option");
+                option.value = location;
+                option.textContent = location;
+                locationFilterSelect.appendChild(option);
+            });
+        }
+    </script>
+</body>
+
+</html>
