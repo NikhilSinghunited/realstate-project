@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Property Filter</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+
+        .search-container {
+            background-image: url(8.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 400px;
+            flex-wrap: nowrap;
+            flex-direction: column;
+            height: 400px;
+            /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px; */
+        }
+
+        label,
+        select,
+        option {
+            margin-right: 10px;
+
+            font-size: 15px;
+            font-weight: 600;
+
+        }
+
+        select {
+            padding: 4px !important;
+            color: navy;
+        }
+
+        .search-container button {
+            padding: 12px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .search-container button:hover {
+            background-color: #45a049;
+        }
+
+        .property-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .property {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin: 20px;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            background-color: #fff;
+            text-align: center;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .property img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 10px;
+        }
+
+        .property h3 {
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+
+        .property p {
+            margin: 0;
+            color: #555;
+        }
+
+        .searchboxbottom {
+            background-color: #343a40;
+            color: #ffffff;
+            padding: 20px;
+        }
+
+        .searchboxbinner {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h4 {
+            font-size: 24px;
+        }
+
+        .searchboxdiv {
+            margin-top: 20px;
+        }
+
+        .col-md-2 {
+            padding: 10px;
+        }
+
+        .searchpic img {
+            width: 100%;
+            height: auto;
+        }
+
+        .searchtext {
+            text-align: center;
+            margin-top: 10px;
+            color: #17a2b8;
+        }
+
+        a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #17a2b8;
+        }
+
+        input {
+            border: 2px solid #4CAF50;
+            border-radius: 4px;
+            padding: 8px;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        p.match-message {
+            color: green;
+            font-weight: bold;
+        }
+
+        .filter-container {
+            background: rgba(255, 255, 255, 0.75);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .pot {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .searchboxbottom_a p {
+
+            background-color: transparent !important;
+            color: #1a1a1a;
+
+        }
+
+        #searchButton {
+            background-color: #ed1b24;
+            text-transform: uppercase;
+        }
+
+
+        footer {
+            padding: 30px;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            width: 100%;
+        }
+
+        iframe {
+            width: 650px !important;
+            height: 200px;
+            border: 2px solid #dcdcdc;
+            border-radius: 10px 10px;
+        }
+
+        @media (max-width: 767px) {
+            .filter-container {
+                padding: 1rem;
+                /* Adjust padding as needed */
+            }
+
+            .filter-container label,
+            .filter-container select {
+                display: block;
+                width: 100%;
+                margin-bottom: 10px;
+                /* Adjust margin as needed */
+            }
+
+            #searchButton {
+                width: 100%;
+            }
+
+            .one {
+                justify-content: center;
+            }
+
+        }
+
+        .logo {
+            width: 85px;
+            height: 65px;
+        }
+
+        .footer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px !important;
+        }
+
+        /* iframe{
+        width: 400px !important;
+        height: 200px ;
+        border: 2px solid #dcdcdc;
+        border-radius: 10px 10px;
+    } */
+        .foot {
+            padding-left: 10px;
+        }
+
+        .card-footer p {
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: gray;
+            ;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary ">
+
+        <div class="container-fluid">
+
+            <a class="navbar-brand" href="#"> <img src="logo.jpg" alt="" class="logo mx-5"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
+                aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+
+                <form class="d-flex ms-auto  mx-5" role="search">
+                    <ul class="navbar-nav  navv   mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link text-black" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-black" href="Buy.html" target="_blank">Buy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-black" aria-disabled="true" href="rent.html"
+                                target="_blank">Rent</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-black" href="Buy.html" target="_blank">Project</a>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="search-container">
+            <div class="filter-container border-3 rounded-3 py-1">
+                <div class="p-3">
+                    <label for="location">Location:</label>
+                    <select id="location">
+
+                        <option value="Bengaluru">Bengaluru</option>
+                        <option value="Dehradun">Dehradun</option>
+                        <option value="Gurugram">Gurugram</option>
+                        <option value="Haldia">Haldia</option>
+                        <option value="all">All</option>
+                    </select>
+
+                    <label for="category">Select Locality:</label>
+                    <select id="category">
+
+                        <option value="Beta1">Beta1</option>
+                        <option value="Delta1">Delta1</option>
+                        <option value="all">All</option>
+                    </select>
+
+                    <label for="office-type">Property Category:</label>
+                    <select id="office-type">
+                        <option value="Residential">Residential</option>
+                        <option value="CommercialLand">CommercialLand</option>
+                        <option value="all">All</option>
+                    </select>
+
+                    <label for="office">Property Type:</label>
+                    <select id="office">
+                        <option value="Property Type">Property Type</option>
+                        <option value="all">All</option>
+                    </select>
+                </div>
+                <button id="searchButton" onclick="search_item()">Search</button>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-5">
+        <div class="row">
+
+            <!-- Property 1 -->
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="card">
+                    <img src="4.jpg" class="card-img-top" alt="Agriculture land">
+                    <div class="card-body">
+                        <p class="card-text text-center">Rs.3.50CR</p>
+                        <div class="d-flex justify-content-between">
+                            <button class="btn btn-outline-warning fs-6">Quick Enquiry</button>
+                            <button class="btn btn-success fs-6 mx-1">View Details</button>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <p class="mb-0">Location: <span>Bengaluru</span></p>
+                        <p class="mb-0">Select Locality: <span>Beta1</span></p>
+                        <p class="mb-0">Category: <span>Residential</span></p>
+                        <p>Property Type: <span>Property Type</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Property 2 -->
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="card">
+                    <img src="5.jpg" class="card-img-top" alt="Free Hold Property">
+                    <div class="card-body">
+                        <p class="card-text text-center">Rs.10.04CR</p>
+                        <div class="d-flex justify-content-between">
+                            <button class="btn btn-outline-warning fs-6">Quick Enquiry</button>
+                            <button class="btn btn-success fs-6 mx-1">View Details</button>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <p class="mb-0">Location: <span>Dehradun</span></p>
+                        <p class="mb-0">Select Locality: <span>Delta1</span></p>
+                        <p class="mb-0">Category: <span>Residential</span></p>
+                        <p>Property Type: <span>Property Type</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Property 3 -->
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="card">
+                    <img src="6.jpg" class="card-img-top" alt="Construction">
+                    <div class="card-body">
+                        <p class="card-text text-center">Rs.7.04CR</p>
+                        <div class="d-flex justify-content-between">
+                            <button class="btn btn-outline-warning fs-6">Quick Enquiry</button>
+                            <button class="btn btn-success fs-6 mx-1">View Details</button>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <p class="mb-0">Location: <span>Haldia</span></p>
+                        <p class="mb-0">Select Locality: <span>Beta1</span></p>
+                        <p class="mb-0">Category: <span>Commercial</span></p>
+                        <p>Property Type: <span>Property Type</span></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="footer">
+        <footer class="d-flex ms-auto justify-content-around">
+
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3499.0838319444074!2d77.11892677529234!3d28.717040575618785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d015ccbfa5369%3A0xe79ab99b0b80b27b!2sNice%20Land!5e0!3m2!1sen!2sin!4v1704350788375!5m2!1sen!2sin"
+                style="border:2;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <!-- Your footer content goes here -->
+            <div class="foot">
+                <p>&copy; 2024 Your Website. All rights reserved.</p>
+                <p>Designed By:-</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function search_item() {
+            // Get the selected values from the filters
+            var location = document.getElementById("location").value;
+            console.log(location);
+            var category = document.getElementById("category").value;
+            console.log(category);
+            var officeType = document.getElementById("office-type").value;
+            console.log(officeType);
+            var office = document.getElementById("office").value;
+            console.log(office);
+
+            // Get all card items
+            var cardItems = document.querySelectorAll('.card');
+
+            // Hide all card items initially
+            cardItems.forEach(function (item) {
+                item.style.display = "none";
+            });
+
+            // Show only matched card items
+            cardItems.forEach(function (item) {
+                var locationElement = item.querySelector('.card-footer p:nth-child(1) span');
+                var categoryElement = item.querySelector('.card-footer p:nth-child(2) span');
+                var officeTypeElement = item.querySelector('.card-footer p:nth-child(3) span');
+                var office1TypeElement = item.querySelector('.card-footer p:nth-child(4) span');
+
+                // Check if the elements exist before accessing their textContent
+                var itemLocation = locationElement ? locationElement.textContent.trim() : "";
+                var itemCategory = categoryElement ? categoryElement.textContent.trim() : "";
+                var itemOfficeType = officeTypeElement ? officeTypeElement.textContent.trim() : "";
+                var itemOffice1Type = office1TypeElement ? office1TypeElement.textContent.trim() : "";
+                console.log(itemLocation);
+                console.log(itemCategory);
+                console.log(itemOfficeType);
+                console.log(itemOffice1Type);
+
+                // Check if the item matches the selected filters
+                if ((location === "all" || itemLocation === location) &&
+                    (category === "all" || itemCategory === category) &&
+                    (officeType === "all" || itemOfficeType === officeType) &&
+                    (office === "all" || itemOffice1Type === office)) {
+                    // If it's a match, display the card item
+                    item.style.display = "block";
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
